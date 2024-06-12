@@ -1,22 +1,26 @@
 <template>
     <div>
 <h1>I miei Progetti:</h1>
-<div>
-    <ul>
-        <li v-for="project in projects">
+<div class="row">
+<ProjectCard v-for="project in projects" :project="project"/>
+    <!-- <ul> -->
+        <!-- <li v-for="project in projects">
             <h2>{{ project.progetto }}</h2>
             <p>{{ project.descrizione }}</p>
             <p>{{ project.link }}</p>
-        </li>
-    </ul>
+        </li> -->
+    <!-- </ul> -->
 </div>
     </div>
 </template>
 
 <script>
 import axios from 'axios'
+import ProjectCard from './ProjectCard.vue'
     export default {
- 
+        components: {
+            ProjectCard
+        },
         data() {
            return{
             projects:[]
