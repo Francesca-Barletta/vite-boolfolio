@@ -1,12 +1,13 @@
 <template>
     <div>
-<h1>main</h1>
+<h1>I miei Progetti:</h1>
     </div>
 </template>
 
 <script>
+import AppCard from './AppCard.vue'
     export default {
-        
+        AppCard
     }
 </script>
 
