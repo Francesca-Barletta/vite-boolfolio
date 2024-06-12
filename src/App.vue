@@ -22,6 +22,6 @@ import AppMain from './components/AppMain.vue'
   }
 </script>
 
-<style lang="sass">
+<style lang="scss">
 
 </style>

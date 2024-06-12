@@ -1,30 +1,25 @@
 <template>
-        <div class="card">
-    
-                <ul>
-                    <li>
-                        <h2>{{ project.progetto }}</h2>
-                    </li>
+    <div class="col-4">
 
-                    <li>
-                         <p>Descrizione: {{ project.descrizione }}</p>
-                    </li>
-                    
-                    <li>
-                        <p>Link:{{ project.link }}</p>
-                    </li>
-                    <li>
-                       <p>Tipo:{{ project.type }}</p>
-                    </li>
+        <div class="card" style="width: 18rem;">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card-body">
+                <h5 class="card-title">{{ project.progetto }}</h5>
+
+                <p class="card-text">Descrizione: {{ project.descrizione }}</p>
+                <a href="project.link " class="btn btn-primary">{{ project.link }}</a>
+                <ul class="list-unstyled">
                     <li v-for="technology in project.technologies" :key="technology.id">
-                       <p>Tecnologia:{{ technology.name }}</p>
+                        <p>Tecnologia:{{ technology.name }}</p>
                     </li>
                 </ul>
-
             </div>
-      
+        </div>
+    </div>
 
-   
+
+
+
 
 </template>
 
@@ -36,11 +31,7 @@
     }
 </script>
 
-<style lang="sass" scoped>
-.card{
-    width:200px;
-    border:1px solid black;
-    padding:10px
-}
+<style lang="scss" scoped>
+
 
 </style>

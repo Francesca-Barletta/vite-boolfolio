@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
 <h1>I miei Progetti:</h1>
 <div class="row">
 <ProjectCard v-for="project in projects" :project="project"/>
@@ -42,6 +42,6 @@ import ProjectCard from './ProjectCard.vue'
     }
 </script>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
 
 </style>
