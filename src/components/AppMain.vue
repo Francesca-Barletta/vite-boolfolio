@@ -5,9 +5,26 @@
 </template>
 
 <script>
-import AppCard from './AppCard.vue'
+import axios from 'axios'
     export default {
-        AppCard
+ 
+        data() {
+           return{
+            projects:[]
+           }
+        },
+        methods: {
+            fetchProjects() {
+                axios.get('http://127.0.0.1:8000/api/projects')
+                .then((res)=>{
+                    this.projects = res.data.results.data
+                })
+            }
+        },
+        created(){
+            this.fetchProjects()
+        }
+     
     }
 </script>
 
