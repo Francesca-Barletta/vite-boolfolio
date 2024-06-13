@@ -33,6 +33,7 @@
             corrupti asperiores obcaecati, sed molestiae totam soluta blanditiis tenetur ipsa sequi sint tempore
             maiores. Illo!</p>
         </div>
+    
 
     </div>
 </template>

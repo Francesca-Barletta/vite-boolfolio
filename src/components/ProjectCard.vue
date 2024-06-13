@@ -19,7 +19,7 @@
                         <p>{{ technology.name }}</p>
                     </li>
                 </ul>
-                <RouterLink class="text-decoration-none" to="/portfolio/:slug {{$route.params.slug}}">Mostra</RouterLink>
+                <RouterLink class="text-decoration-none btn btn-primary mb-3" :to="{ name: 'projects.show', params: {slug: project.slug}}">Mostra</RouterLink>
             </div>
         </div>
     </div>
