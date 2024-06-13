@@ -1,11 +1,14 @@
 <template>
-<AppHeader/>
-
-  <main>
-    <RouterView />
-  </main>
-
-<AppFooter/>
+  <div class="d-flex flex-column min-vh-100">
+    
+    <AppHeader/>
+    
+      <main class="d-flex flex-column flex-grow-1">
+        <RouterView />
+      </main>
+    
+    <AppFooter/>
+  </div>
 </template>
 
 <script>
