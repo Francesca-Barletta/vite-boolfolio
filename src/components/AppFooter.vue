@@ -1,6 +1,8 @@
 <template>
-    <h1>Footer</h1>
-    </template>
+<div class="container-fluid bg-primary text-center">
+    <p class="text-white">powered by ricciolopigro</p>
+</div>
+</template>
     
     <script>
         export default {

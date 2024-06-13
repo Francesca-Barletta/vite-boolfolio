@@ -1,7 +1,7 @@
 <template>
     <div class="col">
 
-        <div class="card h-100 align-items-center">
+        <div class="card h-100 align-items-center shadow-lg rounded-4">
             <!-- <img src="..." class="card-img-top" alt="..."> -->
             <div class="card-body">
                 <h3 class="card-title text-center">{{ project.progetto }}</h3>

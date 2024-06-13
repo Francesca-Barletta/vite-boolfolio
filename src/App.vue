@@ -28,5 +28,8 @@ import AppFooter from './components/AppFooter.vue'
 </script>
 
 <style lang="scss">
-
+main{
+  background-image: url('../public/sfondo.jpg');
+  background-size: cover;
+}
 </style>

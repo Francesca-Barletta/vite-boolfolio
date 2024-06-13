@@ -1,6 +1,8 @@
 <template>
     <div class="container  flex-grow-1">
-        <h1>I miei Progetti:</h1>
+        <div class="mt-5 mb-5 text-center text-white p-2 rounded-4 bg-primary shadow-sm w-100">
+            <h1>I miei Progetti:</h1>
+        </div>
         <div class="row row-cols-2 row-gap-3">
             <ProjectCard v-for="project in projects" :project="project" />
         </div>
