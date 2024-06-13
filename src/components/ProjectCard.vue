@@ -1,13 +1,13 @@
 <template>
-    <div class="col-4">
+    <div class="col">
 
-        <div class="card h-100">
+        <div class="card h-100 align-items-center">
             <!-- <img src="..." class="card-img-top" alt="..."> -->
             <div class="card-body">
-                <h5 class="card-title">{{ project.progetto }}</h5>
+                <h3 class="card-title text-center">{{ project.progetto }}</h3>
 
-                <p class="card-text">Descrizione: {{ project.descrizione }}</p>
-                <a :href="project.link" class="btn btn-primary">{{ project.link }}</a>
+                <p class="card-text text-center">{{ project.descrizione }}</p>
+                <a :href="project.link" class="btn btn-primary mb-3">{{ project.link }}</a>
                 <p class="card-text" v-if="project.type">Tipo: {{ project.type.name }}</p>
             
             

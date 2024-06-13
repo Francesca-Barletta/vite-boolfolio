@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <h1>I miei Progetti:</h1>
-        <div class="row row-gap-3">
+        <div class="row row-cols-2 row-gap-3">
             <ProjectCard v-for="project in projects" :project="project" />
         </div>
     </div>
