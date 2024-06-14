@@ -15,9 +15,14 @@
             
                 <ul class="d-flex gap-3 list-unstyled">
                     <li>Tecnologia:</li>
-                    <li v-for="technology in project.technologies" :key="technology.id">
-                        <p>{{ technology.name }}</p>
-                    </li>
+                    <template v-if="project.technologies.length > 0">
+                        <li v-for="technology in project.technologies" :key="technology.id">
+                            <p>{{ technology.name}}</p>
+                        </li>
+                    </template>
+                    <li v-else>nessuna</li>
+                 
+
                 </ul>
                 <RouterLink class="text-decoration-none btn btn-primary mb-3" :to="{ name: 'projects.show', params: {slug: project.slug}}">Mostra</RouterLink>
             </div>
