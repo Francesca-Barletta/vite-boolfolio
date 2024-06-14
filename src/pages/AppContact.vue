@@ -23,9 +23,7 @@
                  <button type="submit" class="btn btn-primary p-2 ms-2 mb-3">Invia</button>
             </form>
         </div>
-        <div class="text-center">
-            <button class="m-3 btn btn-primary" @click="$router.go(-1)">indietro</button>
-        </div>
+  
     </div>
 
 </template>

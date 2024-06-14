@@ -29,7 +29,7 @@ import AppFooter from './components/AppFooter.vue'
 
 <style lang="scss">
 main{
-  background-image: url('../public/sfondo.jpg');
+  background-image: url('../sfondo.jpg');
   background-size: cover;
 }
 </style>

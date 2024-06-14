@@ -7,9 +7,7 @@
             <ProjectCard v-for="project in projects" :project="project" />
         </div>
     </div>
-    <div class="text-center">
-            <button class="m-3 btn btn-primary" @click="$router.go(-1)">indietro</button>
-        </div>
+ 
     <div class="container" v-if="lastPage > 1">
         <ul class="d-flex list-unstyled justify-content-center gap-3 my-3">
             <li :class="n === currentPage ? 'btn btn-primary' : 'btn btn-secondary'" @click="changePage(n)" v-for="n in lastPage" :key="n">{{ n }}</li>
