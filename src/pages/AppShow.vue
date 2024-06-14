@@ -1,13 +1,13 @@
 <template>
-    <div class="container">
+    <div class="container" v-if="project">
 
         <div class="mt-5 mb-5 text-center text-white p-2 rounded-4 bg-primary shadow-sm">
-            <h1>{{ project.progetto}}</h1>
+            <h1>{{ project.progetto }}</h1>
         </div>
         <div  class="mt-5 mb-5 text-center p-2 rounded-4 bg-white shadow-sm">    
             <p class="card-text text-center">{{ project.descrizione }}</p>
                 <a :href="project.link" class="btn btn-primary mb-3">{{ project.link }}</a>
-                <p class="card-text" v-if="project.type">Tipo: {{ project.type.name }}</p>
+                <p class="card-text">Tipo: {{ project.type ? project.type.name : 'nessuno' }}</p>
 
                 <ul class="d-flex gap-3 list-unstyled justify-content-center">
                     <li>Tecnologia:</li>
@@ -25,7 +25,7 @@
         
         <script>
         import axios from 'axios';
-import { sassNull } from 'sass';
+
 
      export default {
 
@@ -37,7 +37,7 @@ import { sassNull } from 'sass';
                 },
                 data() {
                     return{
-                        project: sassNull
+                        project: null
                     }
                 },
         methods: {
@@ -49,6 +49,9 @@ import { sassNull } from 'sass';
                 })
                 .catch((err)=> {
                     console.log(err)
+                    this.$router.replace({name: 'not-found', params: {
+                        pathMatch: this.$route.path.substring(1).split('/')},
+                })
                 })
             }
         },

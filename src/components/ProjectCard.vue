@@ -8,7 +8,7 @@
 
                 <p class="card-text text-center">{{ project.descrizione }}</p>
                 <a :href="project.link" class="btn btn-primary mb-3">{{ project.link }}</a>
-                <p class="card-text" v-if="project.type">Tipo: {{ project.type.name }}</p>
+                <p class="card-text">Tipo: {{ project.type ? project.type.name : 'nessuno' }}</p>
                
 
                 
