@@ -9,7 +9,8 @@
                 <p class="card-text text-center">{{ project.descrizione }}</p>
                 <a :href="project.link" class="btn btn-primary mb-3">{{ project.link }}</a>
                 <p class="card-text">Tipo: {{ project.type ? project.type.name : 'nessuno' }}</p>
-               
+                <img v-if="project.image" :src="project.image_fullpath" alt="">
+               <!-- <p class="card-text">{{ project.image_fullpath }}</p> -->
 
                 
             

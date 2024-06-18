@@ -6,6 +6,7 @@
         <div class="row row-cols-2 row-gap-3">
             <ProjectCard v-for="project in projects" :project="project" />
         </div>
+        <!-- {{console.log(this.projects) }} -->
     </div>
  
     <div class="container" v-if="lastPage > 1">
@@ -42,7 +43,7 @@ import ProjectCard from '../components/ProjectCard.vue'
                     }
                 })
                 .then((res)=>{
-                    console.log(res.data.results)
+                    // console.log(res.data.results)
                     this.projects = res.data.results.data
                     this.lastPage = res.data.results.last_page
                 })
@@ -50,7 +51,9 @@ import ProjectCard from '../components/ProjectCard.vue'
         },
         created() {
             this.fetchProjects()
+           
         },
+
      
     }
 </script>
