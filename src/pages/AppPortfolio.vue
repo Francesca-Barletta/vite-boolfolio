@@ -3,7 +3,7 @@
         <div class="mt-5 mb-5 text-center text-white p-2 rounded-4 bg-primary shadow-sm w-100">
             <h1>I miei Progetti:</h1>
         </div>
-        <div class="row row-cols-2 row-gap-3">
+        <div class="row row-cols-1 row-cols-md-2 row-gap-3">
             <ProjectCard v-for="project in projects" :project="project" />
         </div>
         <!-- {{console.log(this.projects) }} -->

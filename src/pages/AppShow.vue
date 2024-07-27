@@ -5,8 +5,9 @@
             <h1>{{ project.progetto }}</h1>
         </div>
         <div  class="mt-5 mb-5 text-center p-2 rounded-4 bg-white shadow-sm">    
-            <p class="card-text text-center">{{ project.descrizione }}</p>
+            <p class="card-text text-center fw-bold text-secondary">{{ project.descrizione }}</p>
             <img v-if="project.image" :src="project.image_fullpath" alt="">
+            <img v-else src="http://127.0.0.1:8000/storage/project_images/default-image.jpg" class="mb-4" alt="">
             <!-- <p>{{ console.log(project.image_fullpath) }}</p> -->
                 <a :href="project.link" class="btn btn-primary mb-3">{{ project.link }}</a>
                 <p class="card-text">Tipo: {{ project.type ? project.type.name : 'nessuno' }}</p>
@@ -20,7 +21,7 @@
 
         </div>
         <div class="text-center">
-            <button class="btn btn-primary" @click="$router.go(-1)">indietro</button>
+            <button class="btn btn-primary mb-4" @click="$router.go(-1)">indietro</button>
         </div>
     </div>
 </template>
